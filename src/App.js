@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 function App() {
@@ -30,6 +30,9 @@ function App() {
   const inputChange = (e) => {
     setInputValue(e.target.value);
   };
+  useEffect(()=>
+  getData(),[]
+  );
   return (
     <div>
       <input type="text" onChange={inputChange} value={inputValue} />
