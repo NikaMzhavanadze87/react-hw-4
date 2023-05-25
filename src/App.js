@@ -30,9 +30,10 @@ function App() {
   const inputChange = (e) => {
     setInputValue(e.target.value);
   };
-  useEffect(()=>
-  getData(),[]
-  );
+  useEffect(() => {
+    getData();
+  }, []);
+  
   return (
     <div>
       <input type="text" onChange={inputChange} value={inputValue} />
